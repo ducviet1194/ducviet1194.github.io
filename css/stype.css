@@ -29,6 +29,7 @@ img{
 	border: 1px solid #dddddd;
 	width: 33,333%;
 	max-width: 33.333%;
+	max-height: 454px;
 	padding: 15px;
 }
 .wrap{
