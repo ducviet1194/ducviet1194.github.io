@@ -38,7 +38,7 @@ img{
 -webkit-transition-duration: 500ms;
 }
 .demo img:hover{
--webkit-transform: scale(.5);
+-webkit-transform: scale(1.3);
 -webkit-transition-timing-function: ease-out;
 -webkit-transition-duration: 500ms;
 }
