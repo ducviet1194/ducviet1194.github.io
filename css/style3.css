@@ -1,6 +1,9 @@
  *{
 	box-sizing: border-box;
 }
+h2,h3{
+	font-family: Gentium Basic;
+}
 body{
 	background-color: #E5E5E5;
 	margin: 0;
@@ -9,6 +12,7 @@ body{
 }
 p{
 	text-align: justify;
+	font-family: Tinos;
 }
 .wrap{
 	width: 1000px;
