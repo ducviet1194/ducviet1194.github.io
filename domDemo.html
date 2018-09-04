@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>domDemo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style3 new.css">
+	<script>
+			var paragraph1 = document.getElementById("p1");
+			var paragraph2 = document.getElementById("p2");
+			var paragraph3 = document.getElementById("p3");
+			function changeFontSize(x){
+				var doanVan = document.querySelectorAll("p");
+				doanVan[0].style.fontSize = x+"px";
+				doanVan[1].style.fontSize = x+"px";
+				doanVan[2].style.fontSize = x+"px";
+			}
+			function increaseFontSize(paragraph){
+				var theSize = window.getComputedStyle(paragraph, null).getPropertyValue("font-size");
+				if(parseFloat(theSize)<=29){
+					paragraph.style.fontSize = parseFloat(theSize) + 1 + "px";
+				}
+			}
+			function decreaseFontSize(paragraph){
+				var theSize = window.getComputedStyle(paragraph, null).getPropertyValue("font-size");
+				if(parseFloat(theSize)>=11){
+					paragraph.style.fontSize = parseFloat(theSize) - 1 + "px";
+				}
+			}
+			function changeColor(){
+				paragraph1.style.color = "green";
+				paragraph2.style.color = "yellow";
+				paragraph3.style.color = "red";
+			}
+			function changeBgColor(color){
+				document.body.style.background = color;
+			}
+			function copyContent(paragraph1, paragraph2){
+				paragraph1.innerText = paragraph2.innerText;
+			}
+	</script>
+</head>
+<body>
+	
+	<div id="wrap">
+		<p id="p1">
+			Anh sinh viên Ngoại quốc đang theo học ngôn ngữ Việt nam, bữa nọ trên đường đi dã ngoại gặp 2 người đi câu ca thán" chán quá hôm nay đi câu chẳng được con khỉ nào cả". Chờ cho họ đi khuất anh bạn hớn hở mở sổ tay ghi nắn nót: "Ngày....tháng.... năm.....phát  hiện ở Việt nam có loại 'Khỉ' sống dưới nước".
+		</p>
+		<p id="p2">
+			Một tờ báo của Pháp đăng tin: "50 phần trăm Quốc hội Pháp vô học!". Nhận được phản đối rầm rĩ từ phía Quốc hội, ngày hôm sau cũng tờ này cải chính lại: "50phần trăm Quốc hội Pháp ... có học!"
+		</p>
+		<p id="p3">
+			Người ta thấy một cảnh rất lạ trong một doanh trại. Một anh lính đang đọc rất to một lá thư, còn anh kia hai tay bịt chặt tai anh đang đọc. Khi được hỏi vì sao làm như vậy, anh trả lời: " Đây là thư người yêu tôi gửi cho tôi. Tôi không biết chữ nên nhờ nó đọc hộ. Nhưng tôi lại không muốn cho nó nghe chuyện riêng tư của tôi, thế thôi ! "
+		</p>
+	</div>
+</body>
+</html>
