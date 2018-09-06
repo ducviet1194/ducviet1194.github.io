@@ -9,17 +9,54 @@ body{
 	padding: 0;
 }
 #page{
-    width: 266px;
+    width: 400px;
     margin: auto;
+    background: #4DC0ED;
+    border: 2px solid #858A8E;
+}
+h2{
+    text-align: center;
+    background: #35446E;
+    color: #53CAF4;
+    padding: 10px;
 }
 #ketqua{
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
+    width: 374px;
+    height: 50px;
+    font-size: 25px;
+    padding: 5px;
+    text-align: right;
+    margin: 10px 10px;
+    overflow: hidden;
 
 }
-#colum1 button{
-    width: 40px;
-    margin: 5px;
-    height: 40px;
+#colum1{
+    margin: 15px;
 }
+.bt{
+    width: 60px;
+    margin: 5px;
+    height: 60px;
+    font-size: 25px;
+}
+.bang{
+    width: 132px;
+    margin: 5px;
+    height: 60px;
+}
+.bt {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+   
+  .bt:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 5px;
+    /* text-shadow: 1px 1px 2px #427388; */
+  }

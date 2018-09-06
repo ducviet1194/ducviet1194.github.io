@@ -9,42 +9,45 @@
     <div id="page">
         <h2>Calculator</h2>
         <div id="">
-            <input type="text" id="ketqua" value="0"/><br/>
+            <input type="text" id="ketqua" value=""/><br/>
         </div>
         <div id="colum1">
-            <button onclick="xoa()">CE</button>
-            <button onclick="">&lsaquo;&ndash;</button>
-            <button onclick="">%</button>
-            <button onclick="">!</button>
-            <button onclick=""></button>
+            <button class="bt" onclick="xoa()">CE</button>
+            <button class="bt" onclick="undo()">&lsaquo;&ndash;</button>
+            <button class="bt" onclick="phantram()">%</button>
+            <button class="bt" onclick="giaithua()">!</button>
+            <button class="bt" onclick="setnum(this.value)"  value="+">+</button>
         </div>
         <div id="colum1">
-            <button onclick="">x&#178;</button>
-            <button onclick="setnum(this.value)"  value="7">7</button>
-            <button onclick="setnum(this.value)"  value="8">8</button>
-            <button onclick="setnum(this.value)"  value="9">9</button>
-            <button onclick="setnum(this.value)"  value="+">+</button>
+            <button class="bt" onclick="binhphuong()">x&#178;</button>
+            <button class="bt" onclick="setnum(this.value)"  value="7">7</button>
+            <button class="bt" onclick="setnum(this.value)"  value="8">8</button>
+            <button class="bt" onclick="setnum(this.value)"  value="9">9</button>
+            
+            <button class="bt" onclick="setnum(this.value)"  value="-">-</button>
         </div>
         <div id="colum1">
-            <button onclick="">&radic;</button>
-            <button onclick="setnum(this.value)"  value="4">4</button>
-            <button onclick="setnum(this.value)"  value="5">5</button>
-            <button onclick="setnum(this.value)"  value="6">6</button>
-            <button onclick="setnum(this.value)"  value="-">-</button>
+            <button class="bt" onclick="can()">&radic;</button>
+            <button class="bt" onclick="setnum(this.value)"  value="4">4</button>
+            <button class="bt" onclick="setnum(this.value)"  value="5">5</button>
+            <button class="bt" onclick="setnum(this.value)"  value="6">6</button>
+            
+            <button class="bt" onclick="setnum(this.value)"  value="*">*</button>
         </div>
         <div id="colum1">
-            <button onclick="">1/x</button>
-            <button onclick="setnum(this.value)"  value="1">1</button>
-            <button onclick="setnum(this.value)"  value="2">2</button>
-            <button onclick="setnum(this.value)"  value="3">3</button>
-            <button onclick="setnum(this.value)"  value="*">*</button>
+            <button class="bt" onclick="motphanx()">1/x</button>
+            <button class="bt" onclick="setnum(this.value)"  value="1">1</button>
+            <button class="bt" onclick="setnum(this.value)"  value="2">2</button>
+            <button class="bt" onclick="setnum(this.value)"  value="3">3</button>
+            
+            <button class="bt" onclick="setnum(this.value)"  value="/">/</button>
         </div>
         <div id="colum1">
-            <button onclick="">Pi</button>
-            <button onclick="setnum(this.value)"  value="0">0</button>
-            <button onclick="">.</button>
-            <button onclick="ketqua()">=</button>
-            <button onclick="setnum(this.value)"  value="/">/</button>
+            <button class="bt" onclick="setpi(this.value)"  value="3.14159265359">Pi</button>
+            <button class="bt" onclick="setnum(this.value)"  value="0">0</button>
+            <button class="bt" onclick="setnum(this.value)"  value=".">.</button>
+            <button class="bt bang" onclick="ketqua()">=</button>
+            
         </div>
     </div>
     <script>
@@ -56,6 +59,10 @@
             x += num;
             a("ketqua").value = x;
         }
+        function setpi(num){
+            x += num;
+            a("ketqua").value = x;
+        }
         function xoa(){
             x = "";
             a("ketqua").value = x;
@@ -63,6 +70,42 @@
         function ketqua(){
             a("ketqua").value = eval(a("ketqua").value);
             x = a("ketqua").value;
+        }
+        function undo(){
+            x = x.slice(0,x.length-1);
+            a("ketqua").value = x;
+        }
+        function phantram(){
+            x = eval(a("ketqua").value)*100;
+            a("ketqua").value = x;
+            // x = x / 100;
+        }
+        function binhphuong(){
+            x = eval(a("ketqua").value)**2;
+            a("ketqua").value = x;
+        }
+        function can(){
+            x = Math.sqrt(eval(a("ketqua").value));
+            a("ketqua").value = x;
+        }
+        function motphanx(){
+            x = 1/eval(a("ketqua").value);
+            a("ketqua").value = x;
+        }
+        function giaithua(){
+            if(eval(a("ketqua").value) == 0){
+                x = 1;
+                a("ketqua").value = x;
+            }
+            else if(eval(a("ketqua").value) % 1 == 0 && eval(a("ketqua").value) > 0){
+                var giaithua = 1;
+                    for(var i=1; i<eval(a("ketqua").value)+1; i++){
+                        giaithua = giaithua * i;
+                }
+                x = giaithua;
+                a("ketqua").value = x;
+            }
+            
         }
     </script>
 </body>
