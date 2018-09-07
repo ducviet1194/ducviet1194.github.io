@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: #E5E5E5; */
+	margin: 0;
+    padding: 0;
+        background: url(backgrounds3.jpg);
+        color: #666666;
+}
+#page{
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    /* background: #FFFFFF; */
+    /* border: 2px solid #858A8E; */
+    margin-top: 30px;
+}
+#top{
+    height: 40px;
+    width: 400px;
+    padding: 5px 0 0 5px;
+    margin: auto;
+    background: #d0e281;
+    border: 2px solid #858A8E;
+}
+.cauhoiso{
+    width: 12.5%;
+    float: left;
+}
+.so{
+    width: 30px;
+    height: 30px;
+    border: 1px solid  #060707;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    
+}
+.trangso{
+    background: chartreuse;
+}
+p{
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+}
+#question{
+    height: 100px;
+    /* border-top: 2px solid #858A8E; */
+    padding: 5px;
+    border: 2px solid #858A8E;
+    background: #F29603;
+    text-align: center;
+}
+.answer{
+    height: 400px;
+    background: #2CA5FE;
+    cursor: pointer;
+    padding-top: 130px;
+    border: 2px solid #858A8E;
+}
+.answer p{
+    margin: 0;
+    padding: 13px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 69px;
+}
+.answer img{
+    width: 100%;
+}
+.dapan{
+    margin: 5px 40px 5px 40px;
+    border-radius: 69px;
+    background: #F9F9F9;
+    cursor: pointer;
+    
+}
+.dapan:hover {
+    /* border: 1px solid; */
+    /* box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2); */
+    /* outline-color: rgba(255, 255, 255, 0); */
+    /* outline-offset: 5px; */
+    text-shadow: 1px 1px 2px #427388;
+  }
+
+button{
+    margin-left: 250px;
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    border-radius: 69px;
+    font-size: 18px;
+  }
+   
+  button:hover {
+    border: 1px solid;
+    background: #42B228;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 5px;
+    /* text-shadow: 1px 1px 2px #427388; */
+  }
